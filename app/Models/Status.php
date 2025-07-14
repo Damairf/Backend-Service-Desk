@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Status extends Model
 {
-    use HasFactory;
+   use HasFactory;
 
-    protected $table = 'reff_status';
-    protected $primaryKey = 'ID_Status';
-    protected $fillable = ['Is_Active'];
-     public function organisasi(): HasMany{
-        return $this -> hasMany( Organisasi::class, 'ID_Status','ID_Status');
-     }
+   protected $table = 'reff_status';
+   protected $primaryKey = 'ID_Status';
+   protected $fillable = ['Is_Active'];
+   public function organisasi(): HasMany{
+      return $this -> hasMany( Organisasi::class, 'ID_Status','ID_Status');
+   }
 }

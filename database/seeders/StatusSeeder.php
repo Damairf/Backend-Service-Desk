@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use DB;
+use App\Models\Status;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,9 +13,9 @@ class StatusSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table("reff_status")->insert([
-            ["Is_Active" => "1"],
-            ["Is_Active" => "0"]
+        Status::insert([
+            ["Nama_Status" => "Aktif"],
+            ["Nama_Status" => "Nonaktif"]
         ]);
     }
 }
