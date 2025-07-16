@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('flow_custom', function (Blueprint $table) {
             $table->id('ID_Flow_Custom');
-            $table->id('Nama_Urutan_Flow_Custom');
+            $table->string('Nama_Urutan_Flow_Custom');
             $table->timestamps();
         });
     }

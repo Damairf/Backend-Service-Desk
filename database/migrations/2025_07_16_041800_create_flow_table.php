@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('flow', function (Blueprint $table) {
             $table->id('ID_Flow');
+            $table->unsignedBigInteger('ID_Flow_Default');
+            $table->unsignedBigInteger('ID_Flow_Custom');
+            
             $table->foreign('ID_Flow_Default')->references('ID_Flow_Default')->on('flow_default');
             $table->foreign('ID_Flow_Custom')->references('ID_Flow_Custom')->on('flow_custom');
             $table->timestamps();
