@@ -15,7 +15,7 @@ class StatusSeeder extends Seeder
     {
         Status::insert([
             ["Nama_Status" => "Aktif"],
-            ["Nama_Status" => "Nonaktif"]
+            ["Nama_Status" => "Nonaktif"],
         ]);
     }
 }

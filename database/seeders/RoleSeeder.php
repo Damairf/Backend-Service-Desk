@@ -19,7 +19,7 @@ class RoleSeeder extends Seeder
             ["Nama_Role" => "Pengelola"],
             ["Nama_Role" => "Unit Pelaksana"],
             ["Nama_Role" => "Pelaksana Teknis"],
-            ["Nama_Role" => "Kepala Dinas"]
+            ["Nama_Role" => "Kepala Dinas"],
         ]);
     }
 }
