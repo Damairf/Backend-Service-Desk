@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             StatusSeeder::class,
         ]);
         $this->call([
-            FlowDefaultSeeder::class,
+            FlowSeeder::class,
         ]);
     }
 }

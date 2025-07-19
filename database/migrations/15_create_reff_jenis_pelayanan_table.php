@@ -16,6 +16,7 @@ return new class extends Migration
             $table->text('Nama_Jenis_Pelayanan');
             $table->string('Persyaratan');
             $table->timestamps();
+            
         });
     }
 

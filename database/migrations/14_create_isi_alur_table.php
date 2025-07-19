@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('flow_default', function (Blueprint $table) {
-            $table->id('ID_Flow_Default');
-            $table->string('Nama_Urutan_Flow_Default');
+        Schema::create('isi_alur', function (Blueprint $table) {
+            $table->id('ID_Isi Alur');
+            $table->string('Isi_Bagian_Alur');
             $table->timestamps();
         });
     }
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('flow_default');
+        Schema::dropIfExists('isi_alur');
     }
 };
