@@ -20,6 +20,7 @@ return new class extends Migration
             $table->decimal('NIP', 18, 0)->nullable(false);
             $table->string('Nama_Depan')->nullable(false);
             $table->string('Nama_Belakang')->nullable(false);
+            $table->string('Password')->nullable(false);
             $table->timestamps();
 
             $table->foreign('ID_Role')->references('ID_Role')->on('reff_role');
