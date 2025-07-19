@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('ID_Organisasi');
             $table->unsignedBigInteger('ID_Status')->nullable(false);
             $table->string('Nama_OPD')->nullable(false);
-            $table->string('Induk_OPD');
+            $table->string('Induk_OPD')->default('Tidak Diketahui');
             $table->string('Nama_Pengelola')->nullable(false);
             $table->string('No_HP_Pengelola')->nullable(false);
             $table->string('Email')->nullable(false);

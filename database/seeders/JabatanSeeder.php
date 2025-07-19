@@ -19,8 +19,8 @@ class JabatanSeeder extends Seeder
             ["Nama_Jabatan" => "Koordinator"],
             ["Nama_Jabatan" => "Kepala Bidang"],
             ["Nama_Jabatan" => "Sekretaris Dinas"],
-            ["Nama_Jabatan" => "Kepala Dinas"],
             ["Nama_Jabatan" => "Tenaga Teknis"],
+            ["Nama_Jabatan" => "Kepala Dinas"],
         ]);
     }
 }
