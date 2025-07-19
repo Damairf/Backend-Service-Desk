@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('Nama_OPD')->nullable(false);
             $table->string('Induk_OPD');
             $table->string('Nama_Pengelola')->nullable(false);
-            $table->integer('No_HP_Pengelola')->nullable(false);
+            $table->string('No_HP_Pengelola')->nullable(false);
             $table->string('Email')->nullable(false);
             $table->timestamps();
 

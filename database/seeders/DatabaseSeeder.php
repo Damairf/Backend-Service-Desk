@@ -25,5 +25,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             FlowSeeder::class,
         ]);
+        $this->call([
+            OrganisasiSeeder::class,
+        ]);
+        $this->call([
+            UserSeeder::class,
+        ]);
     }
 }
