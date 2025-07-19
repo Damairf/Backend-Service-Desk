@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Permintaan extends Model
+class Pelayanan extends Model
 {
-    protected $table = 'Permintaan';
-    protected $primaryKey = 'ID_Permintaan';
+    protected $table = 'Pelayanan';
+    protected $primaryKey = 'ID_Pelayanan';
     protected $fillable = ['Perihal', 'Deskripsi', 'PIC', 'Lampiran', 'Progress', 'Lampiran_Path', 'Surat_Dinas_Path', 'ID_User', 'ID_Survey0', 'ID_Jenis_Pelayanan'];
 
     public function User(): BelongsTo{
