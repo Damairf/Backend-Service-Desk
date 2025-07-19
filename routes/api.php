@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\JabatanController;
 use App\Http\Controllers\OrganisasiController;
-use App\Http\Controllers\PermintaanController;
+use App\Http\Controllers\PelayananController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\UserController;
@@ -31,4 +31,4 @@ Route::get('/organisasi',[OrganisasiController::class, 'findAll_Organisasi']);
 Route::get('/status',[StatusController::class, 'findAll_Status']);
 Route::get('/status/{statusId}',[StatusController::class, 'findOne_Status']);
 
-Route::get('/permintaan',[PermintaanController::class, 'getAll_Permintaan']);
+Route::get('/permintaan',[PelayananController::class, 'getAll_Permintaan']);

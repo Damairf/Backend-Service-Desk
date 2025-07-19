@@ -12,9 +12,6 @@ class UserController extends Controller
     public function createOne_User(Request $request){
         $Nama_Depan = $request->Nama_Depan;
         $Nama_Belakang = $request->Nama_Belakang;
-        $No_HP = $request->No_HP;
-        $Username = $request->Username;
-        $Email = $request->Email;
         $NIP = $request->NIP;
         $Password = Hash::make($request->Password);
         $ID_Role = $request->ID_Role;
@@ -25,9 +22,6 @@ class UserController extends Controller
         $newUser = User::create([
             'Nama_Depan' => $Nama_Depan,
             'Nama_Belakang' => $Nama_Belakang,
-            'No_HP' => $No_HP,
-            'Username' => $Username,
-            'Email' => $Email,
             'NIP' => $NIP,
             'Password' => $Password,
             'ID_Role' => $ID_Role,
@@ -41,14 +35,14 @@ class UserController extends Controller
 
      public function login(Request $request)
     {
-        $Email = $request->Email;
+        $NIP = $request->NIP;
         $Password = $request->Password;
 
-        $user = User::where('Email', $Email)->first();
+        $user = User::where('NIP', $NIP)->first();
         
 
         if(!$user){
-            return response("Email salah");
+            return response("NIP salah");
         }
 
         if(!Hash::check($Password, $user->Password)){
