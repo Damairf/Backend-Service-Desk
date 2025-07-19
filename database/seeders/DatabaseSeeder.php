@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             StatusSeeder::class,
         ]);
         $this->call([
-            FlowSeeder::class,
+            IsiAlurSeeder::class,
         ]);
         $this->call([
             OrganisasiSeeder::class,

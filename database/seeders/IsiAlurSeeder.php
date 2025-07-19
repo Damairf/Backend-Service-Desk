@@ -7,7 +7,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 
-class FlowSeeder extends Seeder
+class IsiAlurSeeder extends Seeder
 {
     /**
      * Run the database seeds.

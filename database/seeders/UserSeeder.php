@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
                 "NIP" => 123456789123456789,
                 "Nama_Depan" => "User",
                 "Nama_Belakang" => "Staff",
-                "Password" => "passworduser1",
+                "Password" => Hash::make('passworduser1'),
             ],
             [
                 "ID_Role" => 2,
@@ -33,7 +33,7 @@ class UserSeeder extends Seeder
                 "NIP" => 123456789123456789,
                 "Nama_Depan" => "Pengelola",
                 "Nama_Belakang" => "Koordinator",
-                "Password" => "passworduser2",
+                "Password" => Hash::make('passworduser2'),
             ],
             [
                 "ID_Role" => 3,
@@ -43,7 +43,7 @@ class UserSeeder extends Seeder
                 "NIP" => 123456789123456789,
                 "Nama_Depan" => "Unit",
                 "Nama_Belakang" => "Staff",
-                "Password" => "passworduser3",
+                "Password" => Hash::make('passworduser3'),
             ],
             [
                 "ID_Role" => 4,
@@ -53,7 +53,7 @@ class UserSeeder extends Seeder
                 "NIP" => 123456789123456789,
                 "Nama_Depan" => "Teknis",
                 "Nama_Belakang" => "Tenaga",
-                "Password" => "passworduser4",
+                "Password" => Hash::make('passworduser4'),
             ],
             [
                 "ID_Role" => 5,
@@ -63,7 +63,7 @@ class UserSeeder extends Seeder
                 "NIP" => 123456789123456789,
                 "Nama_Depan" => "Kepala",
                 "Nama_Belakang" => "Dinas",
-                "Password" => "passworduser5",
+                "Password" => Hash::make('passworduser5'),
             ],
         ]);
     }
