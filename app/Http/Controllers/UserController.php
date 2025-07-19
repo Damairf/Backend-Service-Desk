@@ -9,6 +9,12 @@ use Firebase\JWT\JWT;
 
 class UserController extends Controller
 {
+    
+    public function findAll_User(){
+        $users = User::get();
+        return response()->json($users);
+    }
+    
     public function createOne_User(Request $request){
         $Nama_Depan = $request->Nama_Depan;
         $Nama_Belakang = $request->Nama_Belakang;

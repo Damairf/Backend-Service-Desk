@@ -16,6 +16,9 @@ Route::post('/user/login',[UserController::class, 'login']);
 Route::get('/user/profile',[UserController::class, 'profile'])->middleware([CekToken::class]);
 Route::get('/user/edit',[UserController::class, 'edit'])->middleware(CekToken::class, cekRole::class);
 Route::get('/user/laporan',[UserController::class, 'laporan'])->middleware([CekToken::class, cekRole::class]);
+Route::get('/user',[UserController::class, 'findAll_User']);
+
+
 
 Route::get('/role',[RoleController::class, 'findAll_Role']);
 Route::get('/role/{roleId}',[RoleController::class, 'findOne_Role']);
