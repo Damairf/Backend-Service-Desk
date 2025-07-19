@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('isi_alur', function (Blueprint $table) {
             $table->id('ID_Isi Alur');
-            $table->string('Isi_Bagian_Alur');
+            $table->string('Isi_Bagian_Alur')->nullable(false);
             $table->timestamps();
         });
     }

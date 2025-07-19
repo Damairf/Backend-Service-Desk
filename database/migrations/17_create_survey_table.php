@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('survey', function (Blueprint $table) {
             $table->id('ID_Survey');
-            $table->tinyInteger('Rating');
-            $table->text('Isi');
+            $table->tinyInteger('Rating')->nullable(false);
+            $table->text('Isi')->nullable(false);
             $table->timestamps();
         });
     }

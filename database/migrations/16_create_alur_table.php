@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('alur', function (Blueprint $table) {
             $table->id('ID_Alur');
-            $table->unsignedBigInteger('ID_Jenis_Pelayanan');
-            $table->unsignedBigInteger('ID_Isi Alur');
+            $table->unsignedBigInteger('ID_Jenis_Pelayanan')->nullable(false);
+            $table->unsignedBigInteger('ID_Isi Alur')->nullable(false);
             $table->timestamps();
             
             $table->foreign('ID_Jenis_Pelayanan')->references('ID_Jenis_Pelayanan')->on('reff_jenis_pelayanan');

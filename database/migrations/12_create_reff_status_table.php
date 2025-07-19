@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('reff_status', function (Blueprint $table) {
             $table->id('ID_Status');
-            $table->string('Nama_Status');
+            $table->string('Nama_Status')->nullable(false);
             $table->timestamps();
         });
     }

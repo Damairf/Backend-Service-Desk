@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('user', function (Blueprint $table) {
             $table->id('ID_User');
-            $table->unsignedBigInteger('ID_Role')->constrained('reff_Role');
-            $table->unsignedBigInteger('ID_Jabatan')->constrained('reff_jabatan');
-            $table->unsignedBigInteger('ID_Organisasi')->constrained('reff_organisasi');
-            $table->unsignedBigInteger('ID_Status')->constrained('reff_status');
-            $table->decimal('NIP', 18, 0);
-            $table->string('Nama_Depan');
-            $table->string('Nama_Belakang');
+            $table->unsignedBigInteger('ID_Role')->nullable(false);
+            $table->unsignedBigInteger('ID_Jabatan')->nullable(false);
+            $table->unsignedBigInteger('ID_Organisasi')->nullable(false);
+            $table->unsignedBigInteger('ID_Status')->nullable(false);
+            $table->decimal('NIP', 18, 0)->nullable(false);
+            $table->string('Nama_Depan')->nullable(false);
+            $table->string('Nama_Belakang')->nullable(false);
             $table->timestamps();
 
             $table->foreign('ID_Role')->references('ID_Role')->on('reff_role');

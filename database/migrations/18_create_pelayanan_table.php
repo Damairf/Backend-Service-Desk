@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('pelayanan', function (Blueprint $table) {
             $table->id('ID_Pelayanan');
-            $table->unsignedBigInteger('ID_User');
-            $table->unsignedBigInteger('ID_Jenis_Pelayanan');
-            $table->unsignedBigInteger('ID_Survey');
-            $table->string('Perihal');
-            $table->text('Deskripsi');
-            $table->string('Surat_Dinas_Path');
-            $table->string('Lampiran_Path');
+            $table->unsignedBigInteger('ID_User')->nullable(false);
+            $table->unsignedBigInteger('ID_Jenis_Pelayanan')->nullable(false);
+            $table->unsignedBigInteger('ID_Survey')->nullable(false);
+            $table->string('Perihal')->nullable(false);
+            $table->text('Deskripsi')->nullable(false);
+            $table->string('Surat_Dinas_Path')->nullable(false);
+            $table->string('Lampiran_Path')->nullable(false);
             $table->unsignedBigInteger('ID_Unit');
             $table->unsignedBigInteger('ID_Teknis');
             $table->timestamps();

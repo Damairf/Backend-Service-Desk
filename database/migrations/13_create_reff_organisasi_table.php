@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('reff_organisasi', function (Blueprint $table) {
             $table->id('ID_Organisasi');
-            $table->unsignedBigInteger('ID_Status');
-            $table->string('Nama_OPD');
+            $table->unsignedBigInteger('ID_Status')->nullable(false);
+            $table->string('Nama_OPD')->nullable(false);
             $table->string('Induk_OPD');
-            $table->string('Nama_Pengelola');
-            $table->integer('No_HP_Pengelola');
-            $table->string('Email');
+            $table->string('Nama_Pengelola')->nullable(false);
+            $table->integer('No_HP_Pengelola')->nullable(false);
+            $table->string('Email')->nullable(false);
             $table->timestamps();
 
             $table->foreign('ID_Status')->references('ID_Status')->on('reff_status');

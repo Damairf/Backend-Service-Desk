@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('reff_jenis_pelayanan', function (Blueprint $table) {
             $table->id('ID_Jenis_Pelayanan');
-            $table->text('Nama_Jenis_Pelayanan');
-            $table->string('Persyaratan');
+            $table->text('Nama_Jenis_Pelayanan')->nullable(false);
+            $table->string('Persyaratan')->nullable(false);
             $table->timestamps();
             
         });
