@@ -25,6 +25,7 @@ class UserController extends Controller
         $ID_Jabatan = $request->ID_Jabatan;
         $ID_Status = $request->ID_Status;
         $ID_Organisasi = $request->ID_Organisasi;
+        
 
         $newUser = User::create([
             'Nama_Depan' => $Nama_Depan,
@@ -38,5 +39,18 @@ class UserController extends Controller
         ]);
 
         return response(["message" => "User ditambahkan", "data" => $newUser]);
+    }
+
+    
+    public function profile(Request $request){
+        $user = User::where("ID_User", $request->ID_User)->first();
+
+        return response(["message"=>"ini endpoint profile", "data user" => $user]);
+    }
+
+    public function updateProfile(Request $request){
+        $user = User::where("ID_User", $request->ID_User)->first();
+
+        return response (["ini endpoint edit untuk user " => $user]);
     }
 }

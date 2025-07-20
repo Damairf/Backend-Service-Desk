@@ -41,15 +41,4 @@ class AuthController extends Controller
         ]);
 
     }
-
-    public function profile(Request $request){
-        $user = User::where("ID_User", $request->ID_User)->first();
-
-        return response(["message"=>"ini endpoint profile", "data user" => $user]);
-    }
-
-    public function edit(){
-        return response (["ini endpoint edit"]);
-    }
-
 }

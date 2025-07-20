@@ -18,10 +18,9 @@ Route::post('/user/login',[AuthController::class, 'login']);
 
 Route::middleware([CekToken::class])->group(function(){
 
-
-Route::get('/user/profile',[AuthController::class, 'profile']);
-Route::get('/user/edit',[AuthController::class, 'edit']);
-Route::get('/user/laporan',[AuthController::class, 'laporan']);
+//endpoint profile
+Route::get('/user/profile',[UserController::class, 'profile']);
+Route::put('/user/profile', [UserController::class, 'updateProfile']);
 
 
 // api User Keseluruhan
