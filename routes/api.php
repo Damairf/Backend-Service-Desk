@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\JabatanController;
 use App\Http\Controllers\OrganisasiController;
 use App\Http\Controllers\PelayananController;
@@ -11,12 +12,16 @@ use App\Http\Middleware\CekRole;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+
+//endpoint login
+Route::post('/user/login',[AuthController::class, 'login']);
+Route::get('/user/profile',[AuthController::class, 'profile'])->middleware([CekToken::class]);
+Route::get('/user/edit',[AuthController::class, 'edit'])->middleware(CekToken::class);
+Route::get('/user/laporan',[AuthController::class, 'laporan'])->middleware(CekToken::class);
+
+
 // api User Keseluruhan
 Route::post('/user',[UserController::class, 'createOne_User'])->middleware(CekToken::class);
-Route::post('/user/login',[UserController::class, 'login']);
-Route::get('/user/profile',[UserController::class, 'profile'])->middleware([CekToken::class]);
-Route::get('/user/edit',[UserController::class, 'edit'])->middleware(CekToken::class, cekRole::class);
-Route::get('/user/laporan',[UserController::class, 'laporan'])->middleware([CekToken::class, cekRole::class]);
 Route::get('/user',[UserController::class, 'findAll_User'])->middleware(CekToken::class);
 
 // api Role
