@@ -15,32 +15,37 @@ use Illuminate\Support\Facades\Route;
 
 //endpoint login
 Route::post('/user/login',[AuthController::class, 'login']);
-Route::get('/user/profile',[AuthController::class, 'profile'])->middleware([CekToken::class]);
-Route::get('/user/edit',[AuthController::class, 'edit'])->middleware(CekToken::class);
-Route::get('/user/laporan',[AuthController::class, 'laporan'])->middleware(CekToken::class);
+
+Route::middleware([CekToken::class])->group(function(){
+
+
+Route::get('/user/profile',[AuthController::class, 'profile']);
+Route::get('/user/edit',[AuthController::class, 'edit']);
+Route::get('/user/laporan',[AuthController::class, 'laporan']);
 
 
 // api User Keseluruhan
-Route::post('/user',[UserController::class, 'createOne_User'])->middleware(CekToken::class);
-Route::get('/user',[UserController::class, 'findAll_User'])->middleware(CekToken::class);
+Route::post('/user',[UserController::class, 'createOne_User']);
+Route::get('/user',[UserController::class, 'findAll_User']);
 
 // api Role
-Route::get('/role',[RoleController::class, 'findAll_Role'])->middleware(CekToken::class);
-Route::get('/role/{roleId}',[RoleController::class, 'findOne_Role'])->middleware(CekToken::class);
+Route::get('/role',[RoleController::class, 'findAll_Role']);
+Route::get('/role/{roleId}',[RoleController::class, 'findOne_Role']);
 
 // api Jabatan
-Route::get('/jabatan',[JabatanController::class, 'findAll_Jabatan'])->middleware(CekToken::class);
-Route::get('/jabatan/{jabatanId}',[JabatanController::class, 'findOne_Jabatan'])->middleware(CekToken::class);
-Route::post('/jabatan',[JabatanController::class, 'insertOne_Jabatan'])->middleware(CekToken::class);
-Route::put('/jabatan/{jabatanId}',[JabatanController::class, 'updateOne_Jabatan'])->middleware(CekToken::class);
-Route::delete('/jabatan/{jabatanId}',[JabatanController::class, 'deleteOne_Jabatan'])->middleware(CekToken::class);
+Route::get('/jabatan',[JabatanController::class, 'findAll_Jabatan']);
+Route::get('/jabatan/{jabatanId}',[JabatanController::class, 'findOne_Jabatan']);
+Route::post('/jabatan',[JabatanController::class, 'insertOne_Jabatan']);
+Route::put('/jabatan/{jabatanId}',[JabatanController::class, 'updateOne_Jabatan']);
+Route::delete('/jabatan/{jabatanId}',[JabatanController::class, 'deleteOne_Jabatan']);
 
 // api Organisasi
-Route::get('/organisasi',[OrganisasiController::class, 'findAll_Organisasi'])->middleware(CekToken::class);
+Route::get('/organisasi',[OrganisasiController::class, 'findAll_Organisasi']);
 
 // api Status
-Route::get('/status',[StatusController::class, 'findAll_Status'])->middleware(CekToken::class);
-Route::get('/status/{statusId}',[StatusController::class, 'findOne_Status'])->middleware(CekToken::class);
+Route::get('/status',[StatusController::class, 'findAll_Status']);
+Route::get('/status/{statusId}',[StatusController::class, 'findOne_Status']);
 
 // api Permintaan
-Route::get('/permintaan',[PelayananController::class, 'getAll_Permintaan'])->middleware(CekToken::class);
+Route::get('/pelayanan',[PelayananController::class, 'getAll_Permintaan']);
+});
