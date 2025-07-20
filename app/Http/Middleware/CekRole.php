@@ -24,7 +24,7 @@ class CekRole
             return response (["tidak terautentikasi"]);
         }
 
-        if($user->ID_Role != 12){
+        if($user->ID_Role != 2){
             return response (["tidak diizinkan"]);
         }
         

@@ -16,6 +16,7 @@ class UserController extends Controller
     }
     
     public function createOne_User(Request $request){
+
         $Nama_Depan = $request->Nama_Depan;
         $Nama_Belakang = $request->Nama_Belakang;
         $NIP = $request->NIP;
