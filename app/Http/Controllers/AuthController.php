@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use Firebase\JWT\JWT;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
